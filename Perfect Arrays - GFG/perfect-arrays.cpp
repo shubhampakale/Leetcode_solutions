@@ -11,7 +11,7 @@ class Solution{
     public:
     bool IsPerfect(int arr[],int n)
     {
-        for(int i=0;i<n/2;i++)
+        for(int i=0;i<n/2 && n!=0 ;i++)
         {
             if(arr[i]!=arr[n-i-1])
                 return false;
