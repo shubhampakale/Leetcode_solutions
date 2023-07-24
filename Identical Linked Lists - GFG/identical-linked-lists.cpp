@@ -84,13 +84,16 @@ bool areIdentical(struct Node *head1, struct Node *head2)
        }
        
    }
-   if((temp1==NULL && temp2!=NULL))
-   {
-       return false;
-   }
-   if((temp1!=NULL && temp2==NULL))
-   {
-       return false;
-   }
-   return true;
+//   if((temp1==NULL && temp2!=NULL))
+//   {
+//       return false;
+//   }
+//   if((temp1!=NULL && temp2==NULL))
+//   {
+//       return false;
+//   }
+//   return true;
+
+
+    return (temp1!=NULL || temp2!=NULL) ? false:true;
 }
