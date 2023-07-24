@@ -44,14 +44,10 @@ class Solution
         
         if(x==1)
         {
-            Node *new_head = head->next;
-            if(new_head!=NULL)
-            {
-                new_head->prev=NULL;
-            }
-            
-            free(head);
-            return new_head;
+            head = head->next;
+            head->prev=NULL;
+
+            return head;
         }
         
         Node *cur=head;
