@@ -8,26 +8,27 @@ using namespace std;
 /*Complete the function below*/
 
 class Solution {
+
 public:
     int PalinArray(int a[], int n)
     {
-    	for(int i=0;i<n;i++)
-    	{
-    	    int ans =0;
-    	    int temp=a[i];
-    	    
-    	    while(temp>0)
-    	    {
-    	       int r =temp%10;
-    	       
-    	       temp/=10;
-    	       
-    	       ans=(ans*10)+r;
-    	    }
-    	    if(ans!=a[i])
-    	        return 0;
-    	}
-    	return 1;
+        for(int i=0;i<n;i++)
+        {
+            int ans=0;
+            
+            int temp=a[i];
+            
+            while(temp>0)
+            {
+                int r = temp%10;   // extracting the last digit 121 = 1
+                temp/=10;   // removing the last digit 121 = 12
+                
+                ans=(ans*10)+r;  // formula 
+            }
+        
+            if(ans!=a[i])   return false;
+        }
+        return true;
     }
 };
 
