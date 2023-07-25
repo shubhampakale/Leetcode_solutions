@@ -9,13 +9,18 @@ using namespace std;
 
 class Solution{
     public:
-    bool IsPerfect(int arr[],int n)
+    bool IsPerfect(int a[],int n)
     {
-        for(int i=0;i<n/2 && n!=0 ;i++)
+        // Complete the function
+        
+        for(int i=0;i<n/2;i++)
         {
-            if(arr[i]!=arr[n-i-1])
+            if(a[i]!=a[n-1-i])
+            {
                 return false;
+            }
         }
+        
         return true;
     }
 };
