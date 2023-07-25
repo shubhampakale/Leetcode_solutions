@@ -15,7 +15,8 @@ using namespace std;
 void print(int ar[], int n)
 {
     
-    for(int i=0;i<n;i+=2)
+    // code here
+    for(int i=0;i<n;i=i+2)
     {
         cout<<ar[i]<<" ";
     }
