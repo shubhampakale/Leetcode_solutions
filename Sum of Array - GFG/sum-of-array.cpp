@@ -9,12 +9,14 @@ class Solution{
 public:
 	// function to return sum of elements
 	// in an array of size n
-	int sum(int arr[], int n) 
-	{
-        
-        if(n==0)    return 0;
-        return arr[n-1] +sum(arr,n-1);
-        	    
+	int sum(int arr[], int n) {
+	    // code here
+	    int ans=0;
+	    for(int i=0;i<n;i++)
+	    {
+	        ans+=arr[i];
+	    }
+	    return ans;
 	}
 };
 
